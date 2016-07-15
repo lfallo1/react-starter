@@ -3,3 +3,5 @@ var ReactDom = require('react-dom');
 var TodoApp = require('TodoApp');
 
 ReactDom.render(<TodoApp />, document.getElementById("app"));
+
+require('../playground/redux/main.js');
