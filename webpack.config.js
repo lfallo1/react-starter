@@ -1,19 +1,9 @@
+// var nodeExternals = require('webpack-node-externals');
 var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
     './src/main.jsx'
-  ],
-  externals: {
-    jquery: 'jQuery'
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
-    })
   ],
   output: {
     path: __dirname,
@@ -23,12 +13,8 @@ module.exports = {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './src/components',
-      './src/components/Todo'
+      './src/components'
     ],
-    alias: {
-      applicationStyles: 'src/styles/app.scss'
-    },
     extensions: ['', '.js', '.jsx']
   },
   module: {
