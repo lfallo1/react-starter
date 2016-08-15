@@ -1,5 +1,5 @@
 var React = require('react');
 var ReactDom = require('react-dom');
-var Routes = require('./routes');
+var SuperheroApp = require('SuperheroApp');
 
-ReactDom.render(Routes, document.getElementById("app"));
+ReactDom.render(<SuperheroApp />, document.getElementById("app"));
